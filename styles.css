@@ -1,0 +1,25 @@
+/* Orbitron Sci Fi Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: var(--font-stack);
+    background-color: var(--nasa-white);
+    color: var(--nasa-blue);
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: 100%;
+    max-height: 200px;
+}
+
+button {
+
+}
+
+.error {
+    color: red;
+}
