@@ -10,39 +10,78 @@
 
 </head>
 <body>
-    <div class="container">
+   <div class="container">
+       <!-- Left Section: NASA Image & Logo -->
+       <div id="nasa-section">
+           <div id="logo-div" class="logo-container">
+               <img src="nasalogo.png" alt="NASA Logo" id="nasalogo.png">
+               <h1 id="nasa-title">Sign Your Life Away!</h1>
+           </div>
+           <footer><p>Please Join Us</p></footer>
+       </div>
 
-        <!-- Section: NASA Image & Logo -->
-        <div id="nasa-section">
-            - NASA Logo
-            - Title: "Join NASA!"
-            - Footer: "Please Join Us"
-        </div>
+       <!-- Right Section: Form -->
+       <div id="form-side">
+           <div id="intro-div">
+               <p>Give Us Your Personal Information</p>
+           </div>
 
-        <!-- Section: Form -->
-        <div id="form-side">
-            - Intro Text: "Give Information"
             <div id="form-div">
-                <form>
-                    - Input: Full Name
-                    - Input: Netflix Password (email type)
-                    - Input: First Dog's Name (phone type)
-                    - Input: Upload Personal Images (file type)
-                    - Dropdown: Position Applying For
-                        * Job option
-                        * Job option
-                        * Job option
-                        * Job option
-                    - Input: Password
-                    - Input: Confirm (password)
-                    - Submit Button: "Submir"
-                    - Error Message Placeholder
-                </form>
-            </div>
-        </div>
-    </div>
+               <form action="#" method="post">
+                   <div class="input-row">
+                       <div class="field">
+                           <label for="fullName">Full Name</label>
+                           <input type="text" id="fullName" required>
+                       </div>
+                       <div class="field">
+                           <label for="email">Your Netflix Password</label>
+                           <input type="email" id="email" required>
+                       </div>
+                   </div>
 
-          <!-- JAVASCRIPT -->
+                   <div class="input-row">
+                       <div class="field">
+                           <label for="phone">Your First Dog's Name</label>
+                           <input type="tel" id="phone" required>
+                       </div>
+                       <div class="field">
+                           <label for="resume">Upload Your Most Personal Images</label>
+                           <input type="file" id="resume" required>
+                       </div>
+                   </div>
+
+                   <div class="field">
+                       <label for="position">Position Applying For</label>
+                       <select id="position" required>
+                           <option value="">-- Select a Job --</option>
+                           <option value="astronaut">Padawan</option>
+                           <option value="engineer">Droid Cleaner</option>
+                           <option value="scientist">Bounty Hunter</option>
+                           <option value="technician">Stormtrooper</option>
+                       </select>
+                   </div>
+
+                   <div class="input-row">
+                       <div class="field">
+                           <label for="password">Your Password</label>
+                           <input type="password" id="password" required>
+                       </div>
+                       <div class="field">
+                           <label for="passwordConfirm">Confirm Your Password</label>
+                           <input type="password" id="passwordConfirm" required>
+                       </div>
+                   </div>
+
+                   <div id="submit-div">
+                       <button type="submit" id="submitBtn">Make It So</button>
+                       <p id="errorMessage"></p>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+
+   <!-- JAVASCRIPT -->
    <script src="script.js"></script>
 
 </body>

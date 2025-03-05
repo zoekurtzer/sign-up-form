@@ -1,9 +1,35 @@
-/* Bunch of constants */
+const button = document.getElementById("submitBtn");
+const password = document.getElementById("password");
 
-/* Event listeners */
+button.addEventListener("click", submitBtn);
+password.addEventListener("click", clearStyle);
 
-/* Password */
+// Clears styles when retyping password
+function clearStyle() {
 
-/* Password Matching */
+   for (["redBorder", "greenBorder"]) {
+       if (password.classList.contains(border)) {
+           password.classList.remove(border);
+       }
+   }
+}
 
-/* Bunch of if else statements */
+// Checks if passwords match
+function submitBtn() {
+   let passText = 
+
+
+   if (passText === passConText) {
+       // If passwords match - Green border
+       password.classList.add("greenBorder");
+       error.innerText = "Passwords match! Welcome to NASA!";
+
+       if (error.classList.contains("error")) {
+       }
+       if (!error.classList.contains("correct")) {
+       }
+
+
+
+   }
+}
