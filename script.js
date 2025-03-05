@@ -1,35 +1,42 @@
 const button = document.getElementById("submitBtn");
 const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("passwordConfirm");
+const error = document.getElementById("errorMessage");
 
-button.addEventListener("click", submitBtn);
-password.addEventListener("click", clearStyle);
+// Event listeners
+button.addEventListener("click", checkPasswords);
+password.addEventListener("input", clearStyles);
+passwordConfirm.addEventListener("input", clearStyles);
 
-// Clears styles when retyping password
-function clearStyle() {
-
-   for (["redBorder", "greenBorder"]) {
-       if (password.classList.contains(border)) {
-           password.classList.remove(border);
-       }
-   }
+// Clear error message and borders
+function clearStyles() {
+    error.innerText = "";
+    password.classList.remove("redBorder", "greenBorder");
+    passwordConfirm.classList.remove("redBorder", "greenBorder");
 }
 
-// Checks if passwords match
-function submitBtn() {
-   let passText = 
+// Check if passwords match
+function checkPasswords() {
+    const match = password.value === passwordConfirm.value;
+    const borderClass = match ? "greenBorder" : "redBorder";
+    const messageClass = match ? "correct" : "error";
 
+    password.classList.add(borderClass);
+    passwordConfirm.classList.add(borderClass);
+    error.innerText = match ? "Passwords match!" : "Passwords don't match!";
 
-   if (passText === passConText) {
-       // If passwords match - Green border
-       password.classList.add("greenBorder");
-       error.innerText = "Passwords match! Welcome to NASA!";
+    error.classList.remove("error", "correct");
+    error.classList.add(messageClass);
 
-       if (error.classList.contains("error")) {
-       }
-       if (!error.classList.contains("correct")) {
-       }
-
-
-
-   }
+// Password message will blink if it doesn't match
+    if (!match) {
+        let visible = true;
+        blinkInterval = setInterval(() => {
+            error.style.visibility = visible ? "hidden" : "visible";
+            visible = !visible;
+        }, 500);
+    } else {
+        clearInterval(blinkInterval);
+        error.style.visibility = "visible";
+    }
 }

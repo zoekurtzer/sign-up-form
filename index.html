@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- NASA "Job Application" Form - A humorous take on recruitment -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,82 +6,98 @@
     <title>Sign Up Form | Zoe Kurtzer</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-   <div class="container">
-       <!-- Left Section: NASA Image & Logo -->
-       <div id="nasa-section">
-           <div id="logo-div" class="logo-container">
-               <img src="nasalogo.png" alt="NASA Logo" id="nasalogo.png">
-               <h1 id="nasa-title">Sign Your Life Away!</h1>
-           </div>
-           <footer><p>Please Join Us</p></footer>
-       </div>
 
-       <!-- Right Section: Form -->
-       <div id="form-side">
-           <div id="intro-div">
-               <p>Give Us Your Personal Information</p>
-           </div>
+    <div class="container">
+        <!-- NASA Section -->
+        <div id="nasa-section">
+            <div class="logo-container">
+                <img src="nasa-logo.png" alt="NASA Logo" id="nasa-logo">
+                <h1 id="nasa-title">Sign Your Life Away!</h1>
+            </div>
+            <footer><p>Please Join Us</p></footer>
+        </div>
+
+        <!-- Form Section -->
+        <div id="form-side">
+            <div id="intro-div">
+                <p>Give Us Your Personal Information</p>
+            </div>
 
             <div id="form-div">
-               <form action="#" method="post">
-                   <div class="input-row">
-                       <div class="field">
-                           <label for="fullName">Full Name</label>
-                           <input type="text" id="fullName" required>
-                       </div>
-                       <div class="field">
-                           <label for="email">Your Netflix Password</label>
-                           <input type="email" id="email" required>
-                       </div>
-                   </div>
+                <form action="#" method="post">
+                    <!-- Row 1: Full Name & Netflix Password -->
+                    <div class="input-row">
+                        <div class="field">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="field">
+                            <label for="netflix">Your Netflix Password</label>
+                            <input type="password" id="netflix" name="netflix" required>
+                        </div>
+                    </div>
 
-                   <div class="input-row">
-                       <div class="field">
-                           <label for="phone">Your First Dog's Name</label>
-                           <input type="tel" id="phone" required>
-                       </div>
-                       <div class="field">
-                           <label for="resume">Upload Your Most Personal Images</label>
-                           <input type="file" id="resume" required>
-                       </div>
-                   </div>
+                    <!-- Row 2: First Dog's Name & Upload Field -->
+                    <div class="input-row">
+                        <div class="field">
+                            <label for="dog">Your First Dog's Name</label>
+                            <input type="text" id="dog" name="dog" required>
+                        </div>
+                        <div class="field">
+                            <label for="upload">Upload Your Most Personal Images</label>
+                            <input type="file" id="upload" name="upload" required>
+                        </div>
+                    </div>
 
-                   <div class="field">
-                       <label for="position">Position Applying For</label>
-                       <select id="position" required>
-                           <option value="">-- Select a Job --</option>
-                           <option value="astronaut">Padawan</option>
-                           <option value="engineer">Droid Cleaner</option>
-                           <option value="scientist">Bounty Hunter</option>
-                           <option value="technician">Stormtrooper</option>
-                       </select>
-                   </div>
+                    <!-- Job Position Selection -->
+                    <div class="field">
+                        <label for="position">Position Applying For</label>
+                        <select id="position" name="position" required>
+                            <option value="">-- Select a Job --</option>
+                            <option value="job">Padawan</option>
+                            <option value="job">Droid Cleaner</option>
+                            <option value="job">Bounty Hunter</option>
+                            <option value="job">Stormtrooper</option>
+                        </select>
+                    </div>
 
-                   <div class="input-row">
-                       <div class="field">
-                           <label for="password">Your Password</label>
-                           <input type="password" id="password" required>
-                       </div>
-                       <div class="field">
-                           <label for="passwordConfirm">Confirm Your Password</label>
-                           <input type="password" id="passwordConfirm" required>
-                       </div>
-                   </div>
+                    <!-- Row 3: Password & Password Confirmation -->
+                    <div class="input-row">
+                        <div class="field">
+                            <label for="password">Your Password</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="field">
+                            <label for="passwordConfirm">Confirm Your Password</label>
+                            <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+                        </div>
+                    </div>
 
-                   <div id="submit-div">
-                       <button type="submit" id="submitBtn">Make It So</button>
-                       <p id="errorMessage"></p>
-                   </div>
-               </form>
-           </div>
-       </div>
-   </div>
+                    <!-- Submit Button -->
+                    <div id="submit-div">
+                        <button type="submit" id="submitBtn">Make It So</button>
+                        <p id="errorMessage"></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-   <!-- JAVASCRIPT -->
-   <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Logo by <a href="https://www.nasa.gov">NASA</a>
+        </p>
+        <p>
+            This is not a real page. If you feel inclined to submit your Netflix password,
+            <a href="mailto:zoekurtzer@gmail.com">email me.</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 </html>
