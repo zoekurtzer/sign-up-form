@@ -1,6 +1,6 @@
-# Library
+# Sign Up Form
 
-Library created with HTML, CSS, and JS.
+Sign Up Form created with HTML, CSS, and JS.
 
 [Live Demo](https://zoekurtzer.github.io/sign-up-form/) :point_left:
 
